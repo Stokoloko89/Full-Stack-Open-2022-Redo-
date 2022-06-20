@@ -10,6 +10,12 @@ const App = () => {
     const newPersonsObject = {
       name: newName,
     };
+    const filteredNames = persons.filter((person) => persons.name === newName);
+    if (filteredNames) {
+      alert(`${newName} is already in the Phonebook`);
+      setNewName("");
+      return;
+    }
     setPersons(persons.concat(newPersonsObject));
     setNewName("");
   };
