@@ -1,9 +1,7 @@
-export const Part = (props) => {
+export const Part = ({ parts }) => {
     return (
         <>
-            <p>{props.parts[0].name} {props.parts[0].exercises}</p>
-            <p>{props.parts[1].name} {props.parts[1].exercises}</p>
-            <p>{props.parts[2].name} {props.parts[2].exercises}</p>
+            {parts.map(part => <p key={part.id}>{part.name} {part.exercises}</p>)}
         </>
     )
 }

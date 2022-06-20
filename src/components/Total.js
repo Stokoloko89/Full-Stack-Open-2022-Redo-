@@ -1,6 +1,6 @@
-export const Total = (props) => {
+export const Total = ({ exercises }) => {
     return (
-        <p>Total number of exercises is {props.exercises[0].exercises + props.exercises[1].exercises + props.exercises[2].exercises}</p>
+        <p>Total number of exercises is {exercises.map((course) => course.exercises).reduce((acc, exercise) => acc + exercise)}</p>
     )
 }
 

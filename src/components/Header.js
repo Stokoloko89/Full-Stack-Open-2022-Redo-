@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Header = (props) => {
+export const Header = ({ header }) => {
     return (
-        <h1>{props.header}</h1>
+        <h1>{header}</h1>
     )
 }
